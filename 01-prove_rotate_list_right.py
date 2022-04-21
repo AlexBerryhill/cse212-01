@@ -18,6 +18,7 @@ def rotate_list_right(data, amount):
     of amount will be in the range of 1 and 
     len(data).
     """
+    #Instead of being the amount from the right to be the amount from the left
     amount = 9-amount
     #get the start
     start = data[:amount]
