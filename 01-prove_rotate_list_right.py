@@ -18,9 +18,16 @@ def rotate_list_right(data, amount):
     of amount will be in the range of 1 and 
     len(data).
     """
-    result = None  
+    amount = 9-amount
+    #get the start
+    start = data[:amount]
+    #get the end
+    end = data[amount:]
 
-    return result
+    #put the start after the end
+    end.extend(start)
+
+    return end
 
 print(rotate_list_right([1,2,3,4,5,6,7,8,9],1)) # [9, 1, 2, 3, 4, 5, 6, 7, 8]
 print(rotate_list_right([1,2,3,4,5,6,7,8,9],5)) # [5, 6, 7, 8, 9, 1, 2, 3, 4]
